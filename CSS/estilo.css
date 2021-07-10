@@ -150,13 +150,14 @@ footer {
   .tablaPlantel tr:nth-child(odd) {
     background-color: #e7e7e7; }
   .tablaPlantel th {
-    width: 25%;
+    font-size: 20px;
     padding: 8px 20px;
-    text-align: left;
-    font-size: 20px; }
-  .tablaPlantel td {
     width: 25%;
-    padding: 8px 20px; }
+    text-align: left; }
+  .tablaPlantel td {
+    font-size: 16px;
+    padding: 8px 20px;
+    width: 25%; }
   .tablaPlantel td:first-child, .tablaPlantel th:first-child {
     font-weight: bold;
     border-right: #000 solid 0.5px; }
@@ -222,14 +223,14 @@ footer {
 
 /*Estilos particulares para la página "galería"*/
 /*Grilla para la parte de imagenes de la galería*/
-.galeriaImagenes {
+.galeriaImagenes, .galeriaVideos {
   display: grid;
   width: 100%;
   margin-bottom: 100px;
   grid-template: 50px repeat(2, auto)/repeat(4, 1fr);
   column-gap: 1.5%;
   row-gap: 5%; }
-  .galeriaImagenes .mainTitulo {
+  .galeriaImagenes .mainTitulo, .galeriaVideos .mainTitulo {
     grid-column: 1 / 5; }
 
 /*Estilo para imagenes de la galería, con animación de animate.css*/
@@ -239,12 +240,7 @@ footer {
 
 /*Estilos para los videos de la página galeria, se quita de momento porque resultaron muy pesados para el sitio*/
 .galeriaVideos {
-  display: grid;
-  width: 100%;
-  margin-bottom: 50px;
-  grid-template: 50px auto/repeat(3, 1fr);
-  column-gap: 1.5%;
-  row-gap: 5%; }
+  grid-template: 50px auto/repeat(3, 1fr); }
   .galeriaVideos .mainTitulo {
     grid-column: 1 / 4; }
 
@@ -257,11 +253,11 @@ footer {
     right: 1em; }
 
 @media screen and (max-width: 600px) {
-  .galeriaImagenes, .galeriaVideos {
+  .galeriaImagenes, .galeriaVideos, .galeriaVideos {
     display: flex;
     flex-direction: column;
     row-gap: 15px; }
-    .galeriaImagenes img, .galeriaImagenes video, .galeriaVideos img, .galeriaVideos video {
+    .galeriaImagenes img, .galeriaVideos img, .galeriaImagenes video, .galeriaVideos video, .galeriaVideos img, .galeriaVideos video {
       max-width: 85%;
       align-self: center; }
   #galeriaMain .mainTitulo {

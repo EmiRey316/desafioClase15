@@ -1,5 +1,10 @@
 /*Estilos particulares para la página "Plantel"*/
 
+@mixin textoTabla($fontSize, $topBottom, $leftRight) {
+    font-size: $fontSize;
+    padding: $topBottom $leftRight;
+}
+
 .tablaPlantel {
     color: $negro;
     width: 80%;
@@ -16,15 +21,14 @@
     }
 
     th {
+        @include textoTabla(20px, 8px, 20px);
         width: 25%;
-        padding: 8px 20px;
         text-align: left;
-        font-size: 20px;
     }
 
     td {
+        @include textoTabla(16px, 8px, 20px);
         width: 25%;
-        padding: 8px 20px;
     }
 
     /*Estilo para la primer columna de cada tabla*/
@@ -54,13 +58,11 @@
         width: 100%;
 
         th {
-            font-size: 14px;
-            padding: 4px 10px;
+            @include textoTabla(14px, 4px, 10px);
         }
 
         td {
-            font-size: 11px;
-            padding: 4px 10px;
+            @include textoTabla(11px, 4px, 10px);
         }
     }
 }

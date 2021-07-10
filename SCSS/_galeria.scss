@@ -23,14 +23,10 @@
 
 /*Estilos para los videos de la página galeria, se quita de momento porque resultaron muy pesados para el sitio*/
 .galeriaVideos {
-    display: grid;
-    width: 100%;
-    margin-bottom: 50px;
+    @extend .galeriaImagenes;
     grid-template: 50px auto /
                     repeat(3, 1fr);
-    column-gap: 1.5%;
-    row-gap: 5%;
-
+    
     .mainTitulo {
         grid-column: 1 / 4;
     }
